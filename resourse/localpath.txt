@@ -1,0 +1,4 @@
+C:\Users\MDPI\AppData\Local\Mozilla
+C:\Users\MDPI\AppData\Local\Thunderbird
+C:\Users\MDPI\AppData\Local\Notepad++
+C:\Users\MDPI\AppData\Local\Google\Chrome

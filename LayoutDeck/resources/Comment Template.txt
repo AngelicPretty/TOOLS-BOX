@@ -1,0 +1,4 @@
+1. Please make a backup before updating the Layout Deck
+2. Fill in the box in English input method 
+3. Only one comment in each row
+4. After saving changes, close all word files and restart

@@ -1,0 +1,9 @@
+C:\Users\MDPI\AppData\Local\Mozilla
+C:\Users\MDPI\AppData\Local\Thunderbird
+C:\Users\MDPI\AppData\Local\Notepad++
+C:\Users\MDPI\AppData\Local\Google\Chrome
+C:\Users\MDPI\AppData\Roaming\Notepad++
+C:\Users\MDPI\AppData\Roaming\Thunderbird
+C:\Users\MDPI\AppData\Roaming\Mozilla
+C:\Windows\System32\drivers\etc\
+C:\Users\MDPI\.texlive2020
