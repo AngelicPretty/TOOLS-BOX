@@ -44,7 +44,7 @@ set "Path=%SysPath%;%SystemRoot%;%SysPath%\Wbem;%SysPath%\WindowsPowerShell\v1.0
 
 cls
 
-title  Little Fish Microsoft MDPI Backup Scripts 5.3
+title  Little Fish Microsoft MDPI Backup Scripts v5.5
 
 set _elev=
 if /i "%~1"=="-el" set _elev=1
@@ -133,7 +133,7 @@ set "mastemp=%SystemRoot%\Temp\__MAS"
 :MainMenu
 cls
 color 07
-title Little Fish MDPI Tool Scripts 5.3
+title Little Fish MDPI Tool Scripts v5.5
 mode 80, 40
 if exist "%mastemp%\.*" rmdir /s /q "%mastemp%\" %nul%
 
@@ -151,7 +151,7 @@ echo:	                                    ¨u¨u
 echo:	                             ¨v    ¨u¨u
 echo:	                               ¨v ¨u
 echo:							
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -191,7 +191,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -219,7 +219,7 @@ echo:         / /\ \ / _`^|/ _ \^| '_ \ / _ \   ^|o o^|__
 echo:        / ____ \ ( ^|^| (_) ^| ^|_) ^|  __/   --^*--__\
 echo:       /_/    \_\___^|\___/^|_.__/ \__^|    C_C_(___) 
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -252,7 +252,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:	
@@ -273,7 +273,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -319,7 +319,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -356,7 +356,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -401,7 +401,7 @@ setlocal enabledelayedexpansion
 cls
 mode 85, 30
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -443,12 +443,17 @@ GOTO :MainMenu
 GOTO :Layout_Deck
 )
 :N_Version
-if exist "%APPDATA%\Microsoft\Templates\Normal.dotm" (
+echo [+] Clean old files...
+IF exist "%APPDATA%\Microsoft\Templates" (
+DEL /f /s /q "%APPDATA%\Microsoft\Templates\*.*"
+)
 
+if exist "%APPDATA%\Microsoft\Templates\Normal.dotm" (
 ren "%APPDATA%\Microsoft\Templates\Normal.dotm" Normal2.dotm
 )
 if %errorlevel% NEQ 0 GOTO E_CLOSE
 if exist "%APPDATA%\Microsoft\Templates\Normal2.dotm" del "%APPDATA%\Microsoft\Templates\Normal2.dotm"
+echo [+] Copy new files...
 copy /y "%~dp0LayoutDeck\resources\Normal.dotm" "%APPDATA%\Microsoft\Templates"
 copy /y "%~dp0LayoutDeck\resources\Normal1.dotm" "%APPDATA%\Microsoft\Templates"
 copy /y "%~dp0LayoutDeck\resources\The MDPI Layout Style Guide v7-2021.12.pdf" "%APPDATA%\Microsoft\Templates"
@@ -469,7 +474,7 @@ copy /y "%~dp0LayoutDeck\resources\copyRight.png" "%APPDATA%\Microsoft\Templates
 copy /y "%~dp0LayoutDeck\resources\MDPI.png" "%APPDATA%\Microsoft\Templates"
 copy /y "%~dp0LayoutDeck\resources\WCopyfind.4.1.1.exe" "%APPDATA%\Microsoft\Templates"
 
-if exist "%SystemRoot%\System32\WindowsPowerShell\v5.3\powershell.exe" (
+if exist "%SystemRoot%\System32\WindowsPowerShell\vv5.5\powershell.exe" (
 echo [+] Add items that we escap Microsoft Defender Antivirus scans.
 powershell -noprofile -command "&{ start-process powershell -ArgumentList '-noprofile -c Add-MpPreference -ExclusionPath "%APPDATA%\Microsoft\Templates\Normal.dotm"; Add-MpPreference -ExclusionPath "%APPDATA%\Microsoft\Templates"; Add-MpPreference -ExclusionPath "%APPDATA%\Microsoft\Templates"' -verb RunAs}")
 
@@ -488,7 +493,7 @@ cls
 mode 85, 30
 echo:
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -525,7 +530,7 @@ goto :Backup
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -561,7 +566,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -597,7 +602,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -634,7 +639,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -742,7 +747,7 @@ cls
 mode 76, 25
 echo:
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -779,7 +784,7 @@ goto :r_network
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -807,7 +812,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -838,7 +843,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
@@ -856,7 +861,7 @@ goto :casVend
 setlocal enabledelayedexpansion
 cls
 echo:
-echo:		Little Fish MDPI Tool Scripts 5.3
+echo:		Little Fish MDPI Tool Scripts v5.5
 echo:		Copyright (C) Little Fish. All rights reserved.
 echo:       ______________________________________________________________
 echo:
